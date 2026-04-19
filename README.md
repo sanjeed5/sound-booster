@@ -59,18 +59,8 @@ extension/         the Chrome extension (load this folder unpacked)
   popup.html
   popup.js
   icons/
-scripts/
-  make_icons.py    regenerates icons/*.png with Pillow
 LICENSE
 README.md
-```
-
-## Regenerating icons
-
-```bash
-uv run --with pillow python scripts/make_icons.py
-# or, with pillow already installed:
-python3 scripts/make_icons.py
 ```
 
 ## Caveats
