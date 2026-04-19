@@ -38,7 +38,7 @@ function setStatusWithLink(beforeText, linkText, linkUrl, afterText, kind) {
 function updateLabel(volume) {
   label.textContent = volume.toFixed(1) + "x";
   label.classList.remove("boost", "high");
-  if (volume > 3.5) label.classList.add("high");
+  if (volume > 2.5) label.classList.add("high");
   else if (volume > 1.05) label.classList.add("boost");
 }
 
@@ -130,10 +130,10 @@ async function applyVolume(volume) {
 
   const badge = volume === 1.0 ? "" : volume.toFixed(1) + "x";
   chrome.action.setBadgeText({ text: badge, tabId: tab.id });
-  chrome.action.setBadgeBackgroundColor({ color: volume > 3.5 ? "#f59e0b" : "#6366f1" });
+  chrome.action.setBadgeBackgroundColor({ color: volume > 2.5 ? "#f59e0b" : "#6366f1" });
 
   if (videosBoosted > 0) {
-    if (volume > 3.5) {
+    if (volume > 2.5) {
       setStatus("High gain — may distort", "warn");
     } else if (volume === 1.0) {
       setStatus("Boost off", "ok");

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Sound Booster",
   "version": "1.0.0",
-  "description": "Boost the volume of any HTML5 video beyond 100%. Per-site memory, soft limiter, minimal permissions.",
+  "description": "Boost the volume of any HTML5 video up to 4x. Per-site memory, soft limiter, minimal permissions.",
   "permissions": ["scripting", "activeTab", "storage"],
   "action": {
     "default_popup": "popup.html",

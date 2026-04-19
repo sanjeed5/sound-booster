@@ -5,7 +5,7 @@ above 100% using the Web Audio API.
 
 ## Features
 
-- Up to 6x boost on any `<video>` tag
+- Up to 4x boost on any `<video>` tag
 - Per-site memory (boost level stored per hostname)
 - Optional soft limiter (`DynamicsCompressorNode`) to reduce clipping at high gains
 - Iframe fallback: if the page has no `<video>` but embeds one, offers a link to open it directly
