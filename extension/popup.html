@@ -156,33 +156,17 @@
     }
 
     .toggle-label {
-      display: flex;
-      align-items: center;
-      gap: 6px;
       color: var(--muted);
       cursor: pointer;
     }
 
-    .info {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      color: var(--muted);
+    .hint {
+      margin-top: 6px;
+      padding: 0 2px;
       font-size: 10px;
-      font-weight: 600;
-      font-style: italic;
-      cursor: help;
-      user-select: none;
-      line-height: 1;
-    }
-
-    .info:hover {
-      color: var(--text);
-      border-color: var(--muted);
+      line-height: 1.4;
+      color: var(--muted);
+      opacity: 0.75;
     }
 
     .switch {
@@ -263,13 +247,10 @@
   </div>
 
   <div class="toggle">
-    <span class="toggle-label">
-      Soft limiter
-      <span class="info" tabindex="0" role="button" aria-label="What is the soft limiter?"
-        title="Catches loud peaks before they clip, so heavy boost stays clean instead of crackly. Leave on unless you want raw audio.">i</span>
-    </span>
+    <span class="toggle-label">Soft limiter</span>
     <div class="switch on" id="limiterSwitch" role="switch" aria-checked="true" tabindex="0"></div>
   </div>
+  <div class="hint">Tames loud peaks so heavy boost stays clean instead of crackly. Leave on unless you want raw audio.</div>
 
   <div class="status" id="status">Loading...</div>
 
