@@ -133,9 +133,13 @@ async function applyVolume(volume) {
   chrome.action.setBadgeBackgroundColor({ color: volume > 3.5 ? "#f59e0b" : "#6366f1" });
 
   if (videosBoosted > 0) {
-    const noun = videosBoosted === 1 ? "video" : "videos";
-    const note = volume > 3.5 ? " (high gain — may distort)" : "";
-    setStatus(`Boosted ${videosBoosted} ${noun}${note}`, volume > 3.5 ? "warn" : "ok");
+    if (volume > 3.5) {
+      setStatus("High gain — may distort", "warn");
+    } else if (volume === 1.0) {
+      setStatus("Boost off", "ok");
+    } else {
+      setStatus("Boost active", "ok");
+    }
   } else if (iframeUrl) {
     setStatusWithLink("No video here. Try opening the ", "embedded frame", iframeUrl, " directly.", "warn");
   } else {
