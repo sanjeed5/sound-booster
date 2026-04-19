@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Sound Booster",
+  "version": "1.0.0",
+  "description": "Boost the volume of any HTML5 video beyond 100%. Per-site memory, soft limiter, minimal permissions.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Boost video volume",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
