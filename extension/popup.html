@@ -155,9 +155,34 @@
       font-size: 12px;
     }
 
-    .toggle label {
-      cursor: pointer;
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       color: var(--muted);
+      cursor: pointer;
+    }
+
+    .info {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      font-style: italic;
+      cursor: help;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .info:hover {
+      color: var(--text);
+      border-color: var(--muted);
     }
 
     .switch {
@@ -238,7 +263,11 @@
   </div>
 
   <div class="toggle">
-    <label for="limiterSwitch">Soft limiter (reduce distortion)</label>
+    <span class="toggle-label">
+      Soft limiter
+      <span class="info" tabindex="0" role="button" aria-label="What is the soft limiter?"
+        title="Catches loud peaks before they clip, so heavy boost stays clean instead of crackly. Leave on unless you want raw audio.">i</span>
+    </span>
     <div class="switch on" id="limiterSwitch" role="switch" aria-checked="true" tabindex="0"></div>
   </div>
 
